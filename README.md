@@ -1,11 +1,8 @@
+<img width="1536" height="1024" alt="vaultwatch-arch" src="https://github.com/user-attachments/assets/e9342550-6afe-4894-87a0-89feb77a64d0" />
 
 
 
-<img width="878" height="586" alt="Screenshot 2026-05-19 164337" src="https://github.com/user-attachments/assets/b41952a0-d700-48fe-bc58-7e45f1a7f873" />
-
-
-
-# 🔐 VaultWatch
+#  VaultWatch
 
 ### Real-Time Security Monitoring and Alerting for AWS Secrets Access
 
@@ -15,7 +12,7 @@ By combining AWS CloudTrail, CloudWatch, SNS, and Secrets Manager, VaultWatch cr
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 Sensitive information such as API keys, database credentials, access tokens, and application secrets represent some of the most valuable assets in any cloud environment.
 
@@ -25,7 +22,7 @@ VaultWatch addresses this challenge by continuously monitoring secret access act
 
 ---
 
-## 🎯 Key Features
+##  Key Features
 
 - Real-time monitoring of secret access events
 - Automated detection of sensitive credential usage
@@ -38,7 +35,7 @@ VaultWatch addresses this challenge by continuously monitoring secret access act
 
 ---
 
-## 🏗️ Architecture Components
+##  Architecture Components
 
 ### AWS Secrets Manager
 Secure storage and management of sensitive credentials, secrets, and application configuration data.
@@ -57,7 +54,7 @@ Provides durable and secure storage for audit logs and historical event data.
 
 ---
 
-## 🔄 Security Workflow
+##  Security Workflow
 
 1. A secret stored in AWS Secrets Manager is accessed.
 2. AWS CloudTrail records the API activity.
@@ -69,7 +66,7 @@ Provides durable and secure storage for audit logs and historical event data.
 
 ---
 
-## 🔒 Security Benefits
+##  Security Benefits
 
 ### Continuous Monitoring
 Provides ongoing visibility into sensitive resource access without manual intervention.
@@ -88,7 +85,7 @@ Enhances accountability by tracking access to critical credentials across the en
 
 ---
 
-## 💼 Business Value
+##  Business Value
 
 Organizations rely heavily on secrets for application authentication, infrastructure management, and third-party integrations. Monitoring access to these assets is a critical component of modern cloud security.
 
@@ -103,7 +100,7 @@ VaultWatch helps organizations:
 
 ---
 
-## 🌍 Use Cases
+##  Use Cases
 
 ### Credential Monitoring
 Track access to production credentials, API keys, and database passwords.
@@ -122,7 +119,7 @@ Improve operational awareness of credential usage across cloud environments.
 
 ---
 
-## 📈 Future Enhancements
+##  Future Enhancements
 
 - Slack and Microsoft Teams integrations
 - Automated incident response using AWS Lambda
@@ -134,7 +131,7 @@ Improve operational awareness of credential usage across cloud environments.
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - AWS Secrets Manager
 - AWS CloudTrail
@@ -145,7 +142,7 @@ Improve operational awareness of credential usage across cloud environments.
 
 ---
 
-## 📊 Project Outcome
+##  Project Outcome
 
 VaultWatch successfully demonstrates how native AWS security services can be combined to create a proactive monitoring and alerting solution for sensitive cloud resources.
 
@@ -161,7 +158,7 @@ The project showcases practical skills in:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Omkar Memane**
 
