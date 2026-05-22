@@ -219,6 +219,8 @@ aws secretsmanager get-secret-value --secret-id "TopSecretInfo" --region your-re
 3. Search for and open `nextwork-secretsmanager-loggroup`.
 4. Open any log stream and confirm that log entries are appearing.
 
+> **Note:** If no log entries appear immediately, wait 2–3 minutes and refresh the page. It can take a short time for CloudTrail to deliver the first batch of logs after enabling CloudWatch integration.
+
 #### Create a Metric Filter
 
 1. From your log group page, select **Actions → Create metric filter**.
@@ -231,7 +233,7 @@ aws secretsmanager get-secret-value --secret-id "TopSecretInfo" --region your-re
 
 | Field | Value |
 |---|---|
-| Filter name | `GetSecretValue` |
+| Filter name | `GetSecretsValue` |
 | Metric namespace | `SecurityMetrics` |
 | Metric name | `Secret is accessed` |
 | Metric value | `1` |
@@ -248,9 +250,11 @@ aws secretsmanager get-secret-value --secret-id "TopSecretInfo" --region your-re
 
 #### Create the Alarm
 
-1. In the **CloudWatch** console, navigate to your log group and open the **Metric filters** tab.
-2. Check the box next to the `GetSecretValue` metric filter.
-3. Select **Create alarm**.
+1. In the **CloudWatch** console, select **Alarms** from the left navigation pane.
+2. Select **All alarms**, then navigate back to your log group: go to **Logs → Log groups** and open `nextwork-secretsmanager-loggroup`.
+3. Select the **Metric filters** tab at the top of the log group page.
+4. Check the box next to the `GetSecretValue` metric filter.
+5. Select **Create alarm**.
 4. Configure the metric settings:
 
 | Setting | Value |
@@ -371,25 +375,32 @@ To avoid ongoing AWS charges, delete all resources created in this project.
 2. Select **Topics**, check `SecurityAlarms`, and select **Delete**. Type `delete me` to confirm.
 3. Select **Subscriptions**, check your subscription, and select **Delete**.
 
-### 2. CloudWatch Alarm & Log Group
+### 2. CloudWatch Alarm, Log Group & Metric Filter
 
 1. Navigate to **CloudWatch → Alarms**.
 2. Select `Secret is accessed` and choose **Actions → Delete**.
 3. Navigate to **CloudWatch → Log groups**.
-4. Select `nextwork-secretsmanager-loggroup` and choose **Actions → Delete log group**.
+4. Select `nextwork-secretsmanager-loggroup` and choose **Actions → Delete log group**.  
+   *(This also removes the metric filter attached to the log group.)*
 
-### 3. CloudTrail Trail
+### 3. IAM Role
+
+1. Navigate to the **IAM** console and select **Roles**.
+2. Search for `CloudTrailRoleForCloudWatchLogs_secrets-manager-trail`.
+3. Select it and choose **Delete**, then confirm.
+
+### 4. CloudTrail Trail
 
 1. Navigate to the **CloudTrail** console and select **Trails**.
 2. Select `secrets-manager-trail` and choose **Delete**.
 
-### 4. S3 Bucket
+### 5. S3 Bucket
 
 1. Navigate to the **S3** console.
 2. Open the bucket `nextwork-secrets-manager-trail-<your-initials>`.
 3. Select all objects, delete them, then delete the bucket itself.
 
-### 5. Secrets Manager Secret
+### 6. Secrets Manager Secret
 
 1. Navigate to **Secrets Manager**.
 2. Open `TopSecretInfo`, select **Actions → Delete secret**.
