@@ -1,6 +1,17 @@
 <img width="1536" height="1024" alt="vaultwatch-arch" src="https://github.com/user-attachments/assets/e9342550-6afe-4894-87a0-89feb77a64d0" />
 
 
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws)
+
+![CloudTrail](https://img.shields.io/badge/CloudTrail-FF9900?style=for-the-badge)
+
+![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=for-the-badge)
+
+![SNS](https://img.shields.io/badge/SNS-FF9900?style=for-the-badge)
+
+![Secrets Manager](https://img.shields.io/badge/Secrets_Manager-527FFF?style=for-the-badge)
+
+![Security](https://img.shields.io/badge/Security_Monitoring-green?style=for-the-badge)
 
 #  VaultWatch
 
